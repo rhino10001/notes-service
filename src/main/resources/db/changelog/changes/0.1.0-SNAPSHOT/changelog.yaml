@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: rhino10001
+      changes:
+        - sqlFile:
+            path: sql/create_schema.sql
+            relativeToChangelogFile: true

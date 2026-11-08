@@ -1,0 +1,22 @@
+liquibase:
+  enabled: true
+  change-log: classpath:db/changelog/db.changelog-master.yaml
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: notes-service
+  datasource:
+    url: jdbc:h2:mem:note-service-database
+    username: user
+    password: password
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2.console.enabled: true
